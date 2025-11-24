@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MainHeader from '../components/layout/headers/MainHeader.astro';
+import Footer from '../components/layout/Footer.astro';
+
+import Card from '../components/ui/Card.astro';
+---
+
+<Layout pageTitle="Computerhead">
+	<MainHeader />
+	<div id="main-content"><!--
+		<div class="w-3xl justify-self-center text-center mb-6 mt-12">
+			<h1 class="justify-self-center text-5xl font-bold">Contacto</h1>
+		</div>-->
+		<p class="py-4 text-xl">Ofrecemos las siguientes opciones para contactarnos:</p>
+		<div class="flex py-2 gap-2 justify-between">
+			<ul>
+                <li>E-mail: contacto[@]computerhead[.]net</li>
+                <li>Teléfono: +34 888 690 787</li>
+                <li>Dirección: Polígono Industrial Aguacate, 28044 Madrid</li>
+            </ul>
+		</div>
+	</div>
+	<Footer />
+</Layout>
