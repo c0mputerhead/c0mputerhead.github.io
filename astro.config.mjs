@@ -8,20 +8,22 @@ import tailwindcss from '@tailwindcss/vite';
 
 import icon from 'astro-icon';
 
-process.env.ASTRO_TELEMETRY_DISABLED = '1';
-
 // https://astro.build/config
 export default defineConfig({
-  trailingSlash: 'always',
-  site: 'https://eltrevii.github.io',
   integrations: [sentry({
     telemetry: false
   }), spotlightjs(), icon()],
+  server: {
+    allowedHosts: true,
+  },
 
   vite: {
-    plugins: [tailwindcss()]
-  },
-  build: {
-    assets: 'assets'
+    plugins: [tailwindcss()],
+    server: {
+        allowedHosts: true,
+    },
+    preview: {
+        allowedHosts: true,
+    },
   }
 });

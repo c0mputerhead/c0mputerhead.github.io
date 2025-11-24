@@ -2,13 +2,31 @@
 import Layout from '../layouts/Layout.astro';
 import MainHeader from '../components/layout/headers/MainHeader.astro';
 import Footer from '../components/layout/Footer.astro';
+
+import Card from '../components/ui/Card.astro';
 ---
 
-<Layout>
+<Layout pageTitle="Computerhead">
 	<MainHeader />
-	<div class="mb-auto" id="main-content">
-		<h1>hello world</h1>
-		<p>im trevi</p>
+	<div id="main-content">
+		<div class="w-3xl justify-self-center text-center mb-6 mt-12">
+			<h1 class="justify-self-center text-5xl font-bold">La potencia de la informática a tu servicio</h1>
+		</div>
+		<p class="py-4 text-xl">Brindamos servicios de calidad que se ajusten a las necesidades de nuestros clientes:</p>
+		<div class="flex p-2 gap-2 bg-black justify-between">
+			<Card icon="phone-call" size=128>
+				<tit2>Soporte</tit2>
+				<p>Ayuda personalizada, hablando con <b>personas humanas</b> y <i>no con robots.</i></p>
+			</Card>
+			<Card icon="laptop-twotone" size=128>
+				<tit2>Montaje</tit2>
+				<p>Montamos ordenadores completamente personalizados al gusto, sin imponer.</p>
+			</Card>
+			<Card icon="folder-network" size=128>
+				<tit2>Redes</tit2>
+				<p>También montamos y gestionamos redes, tanto en hardware como en software, para garantizar una buena conexión.</p>
+			</Card>
+		</div>
 	</div>
 	<Footer />
 </Layout>

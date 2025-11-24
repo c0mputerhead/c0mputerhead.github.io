@@ -11,7 +11,7 @@
     body {
         font-size: var(--text-lg);
     }
-    h1 {
+    h1, tit2 {
         font-size: var(--text-3xl);
     }
     h2 {
@@ -43,14 +43,14 @@
 body::before {
 		z-index: -1;
 		content: "";
-		background-image: url('/src/images/jjk-bg.png');
+		background-image: url('/src/images/bg.webp');
 		background-size: cover;
 		position: fixed;
 		top: 0px;
 		right: 0px;
 		bottom: 0px;
 		left: 0px;
-		opacity: 0.75;
+		opacity: 0.25;
 	}
 
 a {
@@ -77,18 +77,6 @@ nav a:not([aria-current="page"]) {
     color: var(--color-white);
     text-decoration: underline;
     text-underline-offset: --spacing(0.5);
-}
-::-webkit-scrollbar {
-  width: --spacing(4);
-}
-::-webkit-scrollbar-track {
-  background: #a73d01;
-}
-::-webkit-scrollbar-thumb {
-  background: #d17123;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #df8028;
 }
 /*
 details[open] summary {
